@@ -12196,3 +12196,51 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 09:56:10
 
 
 Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-28 09:56:10 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-28 12:20:12 -0700
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 303ms (Views: 285.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/controller/store_controller.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-28 12:20:13 -0700
