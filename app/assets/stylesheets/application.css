@@ -41,6 +41,8 @@ body {
 .thumbnail {
   border: none;
   padding: 0;
+  width: 60px;
+  height: 60px;
 }
 .img-thumbnails {
   padding-left: 0px;
