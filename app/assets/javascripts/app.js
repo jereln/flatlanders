@@ -2,4 +2,4 @@
 //= require_tree ./gem_store
 
 
-var app = angular.module('gemStore', []);
+var app = angular.module('GemStore', []);

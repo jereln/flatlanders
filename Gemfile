@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.1.6'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -24,6 +23,5 @@ group :production do
 end
 
 group :test do
-  gem "minitest-rails"
+  gem 'minitest-rails'
 end
-
