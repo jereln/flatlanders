@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'active_model_serializers'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development, :test do
@@ -21,3 +22,8 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
+group :test do
+  gem "minitest-rails"
+end
+
