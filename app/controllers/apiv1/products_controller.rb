@@ -1,6 +1,5 @@
 module Apiv1
   class ProductsController < ApplicationController
-
     def index
       products = Product.all
       render json: products
@@ -25,7 +24,7 @@ module Apiv1
 
     def destroy
       @product.destroy
-      render json: {msg: 'success'}
+      render json: { msg: 'success' }
     end
 
     private
