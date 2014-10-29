@@ -12268,3 +12268,157 @@ Migrating to AddCategoryIdToProducts (20141029205141)
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141029205141"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-29 14:06:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 328ms (Views: 312.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 14:06:12 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:12 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/controller/store_controller.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-10-29 14:06:13 -0700
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-10-29 14:07:59 -0700
+Processing by Apiv1::ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/apiv1/products/index" for 127.0.0.1 at 2014-10-29 14:08:12 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for Apiv1::ProductsController):
+  actionpack (4.1.6) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jnavarrete/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/jnavarrete/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/jnavarrete/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jnavarrete/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 132ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/controller/store_controller.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-29 14:08:41 -0700
