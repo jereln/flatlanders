@@ -19,7 +19,8 @@
     $scope.create = function(product) {
       $http.post('/apiv1/products', {product: product})
         .success(function(data) {
-          $scope.products.push(data);
+          $scope.products.push(data.product);
+          product.adding = false;
         })
         .error(function(data, status) {
           $scope.errors.push(data);
@@ -35,7 +36,7 @@
         data: product
       })
         .success(function() {
-          product.editing = false;
+          product.update = false;
         })
         .error(function(data, status) {
           $scope.errors.push(data);
@@ -51,7 +52,7 @@
       })
         .success(function() {
           product.deleteConfirm = false;
-          $scope.product.splice($scope.products.indexOf(product), 1)
+          $scope.products.splice($scope.products.indexOf(product), 1)
         })
         .error(function(data, status) {
           $scope.errors.push(data);

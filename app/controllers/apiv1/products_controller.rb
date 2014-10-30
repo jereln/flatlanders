@@ -15,15 +15,17 @@ module Apiv1
     end
 
     def update
-      if @product.update_attributes(product_params)
-        render json: @product
+      product = find_product
+      if product.update_attributes(product_params)
+        render json: product
       else
-        render json: @product.errors, status: 422
+        render json: product.errors, status: 422
       end
     end
 
     def destroy
-      @product.destroy
+      product = find_product
+      product.destroy
       render json: { msg: 'success' }
     end
 
@@ -35,7 +37,7 @@ module Apiv1
     end
 
     def find_product
-      @product = Product.find(params[:id])
+      Product.find(params[:id])
     end
   end
 end
