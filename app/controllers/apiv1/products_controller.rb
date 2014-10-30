@@ -2,7 +2,7 @@ module Apiv1
   class ProductsController < ApplicationController
     def index
       products = Product.all
-      render json: products
+      render json: products, root: false
     end
 
     def create

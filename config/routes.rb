@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   namespace :apiv1 do
     resources :products
+    resources :categories
   end
 end

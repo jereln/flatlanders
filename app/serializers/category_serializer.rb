@@ -1,4 +1,4 @@
-class CategorySerializer < ActiveModel::ProductSerializer
+class CategorySerializer < ActiveModel::Serializer
   attributes :id
 
   embed :ids
