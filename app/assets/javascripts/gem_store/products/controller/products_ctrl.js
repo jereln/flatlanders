@@ -2,12 +2,12 @@
   var app = angular.module('GemStore');
   app.controller('ProductsCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.errors = [];
-    $scope.notes = [];
+    $scope.products = [];
 
     $scope.index = function() {
-      $http.get('/apiv1/notes')
+      $http.get('/apiv1/products')
         .success(function(data) {
-          $scope.notes = data;
+          $scope.products = data;
         })
         .error(function(data, status) {
           $scope.errors.push(data);
@@ -16,10 +16,11 @@
         });
     };
 
-    $scope.create = function(note) {
-      $http.post('/apiv1/notes', {note: note})
+    $scope.create = function(product) {
+      $http.post('/apiv1/products', {product: product})
         .success(function(data) {
-          $scope.notes.push(data);
+          $scope.products.push(data.product);
+          product.adding = false;
         })
         .error(function(data, status) {
           $scope.errors.push(data);
@@ -28,14 +29,14 @@
         });
     };
 
-    $scope.update = function(note) {
+    $scope.update = function(product) {
       $http({
         method: 'PATCH',
-        url: '/apiv1/notes/' + note.id,
-        data: note
+        url: '/apiv1/products/' + product.id,
+        data: product
       })
         .success(function() {
-          note.editing = false;
+          product.update = false;
         })
         .error(function(data, status) {
           $scope.errors.push(data);
@@ -44,14 +45,14 @@
         });
     };
 
-    $scope.destroy = function(note) {
+    $scope.destroy = function(product) {
       $http({
         method: 'DELETE',
-        url: '/apiv1/notes/' + note.id
+        url: '/apiv1/products/' + product.id
       })
         .success(function() {
-          note.deleteConfirm = false;
-          $scope.note.splice($scope.notes.indexOf(note), 1)
+          product.deleteConfirm = false;
+          $scope.products.splice($scope.products.indexOf(product), 1)
         })
         .error(function(data, status) {
           $scope.errors.push(data);

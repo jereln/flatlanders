@@ -1,4 +1,4 @@
-class ProductSerializer < ActiveModel::ProductSerializer
+class ProductSerializer < ActiveModel::Serializer
   attributes :id, :name, :description, :shine, :price,
              :rarity, :color, :faces, :reviews, :category_id
 end

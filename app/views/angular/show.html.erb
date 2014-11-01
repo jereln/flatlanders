@@ -3,26 +3,115 @@
   <head>
   </head>
 
-  <body data-ng-controller="StoreController">
-    <!--  Store Header  -->
-    <header>
-      <h1 class="text-center">Flatlander Crafted Gems</h1>
-      <h2 class="text-center">– an Angular store –</h2>
-    </header>
+  <body>
+    <div data-ng-controller="ProductsCtrl" data-ng-init="index()">
+      <div>
+        <!--  Store Header  -->
+        <header>
+          <h1 class="text-center">Flatlander Crafted Gems</h1>
+          <h2 class="text-center">– an Angular store –</h2>
+        </header>
+      <div class='list-group list-group-item'>
+        <button class="btn btn-success" data-ng-click='product.adding = true'>Add a new product</button>
 
-    <!--  Products Container  -->
-    <div class="list-group">
-      <!--  Product Container  -->
-      <div class="list-group-item" data-ng-repeat="product in products">
-        <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+        <div>
+          <form name='addForm' data-ng-show='product.adding'>
+            <h2>Add a product!</h2>
 
-        <!-- Image Gallery  -->
-        <product-gallery></product-gallery>
-
-        <!-- Product Tabs  -->
-        <product-tabs></product-tabs>
+            <fieldset class="form-group">
+              <input type='text' data-ng-model='newProduct.name' placeholder='Product Name' class="form-control">
+             </fieldset>
+            <fieldset class="form-group">
+              <textarea data-ng-model='newProduct.description' placeholder='Product Description' class="form-control">
+              </textarea>
+             </fieldset>
+            <fieldset class="form-group">
+              <input type='text' data-ng-model='newProduct.price' placeholder='Price' class="form-control">
+            </fieldset>
+            <div class='row'>
+            <fieldset class="form-group col-md-6">
+              <input type='text' data-ng-model='newProduct.shine' placeholder='Shine' class="form-control">
+             </fieldset>
+            <fieldset class="form-group col-md-6">
+              <input type='text' data-ng-model='newProduct.rarity' placeholder='Rarity' class="form-control">
+             </fieldset>
+             </div>
+             <div class='row'>
+            <fieldset class="form-group col-md-6">
+              <input type='text' data-ng-model='newProduct.color' placeholder='Color' class="form-control">
+             </fieldset>
+            <fieldset class="form-group col-md-6">
+              <input type='text' data-ng-model='newProduct.faces' placeholder='Faces' class="form-control">
+             </fieldset>
+             </div>
+            <button class='btn btn-success' data-ng-click='create(newProduct)'>Save</button>
+            <button class="btn btn-danger" data-ng-click='product.adding = false'>Cancel</button>
+          </form>
+        </div>
       </div>
 
+        <!--  Products Container  -->
+        <div class="list-group">
+          <!--  Product Container  -->
+          <div class="list-group-item" data-ng-repeat="product in products">
+            <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+
+            <!-- Image Gallery  -->
+            <product-gallery></product-gallery>
+
+            <!-- Product Tabs  -->
+            <product-tabs></product-tabs>
+            <div>
+              <div>
+                <button class="btn btn-default" data-ng-click='product.update = true'>Update Product</button>
+              </div>
+                <div>
+                  <form name='addForm' data-ng-show='product.update'>
+                    <h2>Update</h2>
+
+                    <fieldset class="form-group">
+                      <input type='text' data-ng-model='product.name' class="form-control">
+                     </fieldset>
+                    <fieldset class="form-group">
+                      <textarea data-ng-model='product.description' class="form-control">
+                      </textarea>
+                     </fieldset>
+                    <fieldset class="form-group">
+                      <input type='text' data-ng-model='product.price' class="form-control">
+                    </fieldset>
+                    <div class='row'>
+                    <fieldset class="form-group col-md-6">
+                      <input type='text' data-ng-model='product.shine' class="form-control">
+                     </fieldset>
+                    <fieldset class="form-group col-md-6">
+                      <input type='text' data-ng-model='product.rarity' class="form-control">
+                     </fieldset>
+                     </div>
+                     <div class='row'>
+                    <fieldset class="form-group col-md-6">
+                      <input type='text' data-ng-model='product.color' class="form-control">
+                     </fieldset>
+                    <fieldset class="form-group col-md-6">
+                      <input type='text' data-ng-model='product.faces' class="form-control">
+                     </fieldset>
+                     </div>
+                    <button class='btn btn-success' data-ng-click='update(product)'>Save</button>
+                    <button class="btn btn-danger" data-ng-click='product.update = false'>Cancel</button>
+                  </form>
+                </div>
+
+              <div>
+                <button class="btn btn-danger" data-ng-click='product.deleteConfirm = true' data-ng-hide='product.deleteConfirm || product.update'>Delete Product</button>
+              </div>
+              <div data-ng-show='product.deleteConfirm'>
+                <button class="btn btn-danger" data-ng-click='destroy(product)'>Confirm</button>
+                <button class="btn btn-info" data-ng-click='product.deleteConfirm = false'>Cancel</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>  
     </div>
   </body>
 </html>
