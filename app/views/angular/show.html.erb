@@ -5,38 +5,37 @@
   </head>
 
   <body>
-    <div class="sidebar">
+    <div class="sidebar" data-ng-controller="UsersCtrl">
       <div data-ng-show="!isLoggedIn()">
-        <button data-ng-click="signUp = true; signIn = false" class="btn btn-info btn-sm">Create Account</button>
-        <button data-ng-click="signIn = true; signUp = false" class="btn btn-info btn-sm">Sign In</button>
+        <button data-ng-click="user.signUp = true; user.logIn = false" class="btn btn-info btn-sm">Create Account</button>
+        <button data-ng-click="user.logIn = true; user.signUp = false" class="btn btn-info btn-sm">Sign In</button>
       </div>
       <div data-ng-show="isLoggedIn()">
-        <p>Signed in as {{ currentUser() }}</p>
-        <button data-ng-click="signOut() class="btn btn-info btn-sm"">Sign Out</button>
+        <button data-ng-click="signOut()" class="btn btn-info btn-sm">Sign Out</button>
       </div>
-      <form name="newUserForm" data-ng-show="signUp" class="form-group list-group list-group-item">
-        <fieldset class="form-group">
-          <input type='text' data-ng-model='newUser.email' placeholder='Email' class="form-control">
-        </fieldset>
-        <fieldset class="form-group">
-          <input type='text' data-ng-model='newUser.password' placeholder='Password' class="form-control">
-        </fieldset>
-        <fieldset class="form-group">
-          <input type='text' data-ng-model='newUser.password_confirmation' placeholder='Confirm Password' class="form-control">
-        </fieldset>       
-        <button data-ng-click="signUp(newUser)" class="btn btn-success btn-sm">Create</button>
-        <button data-ng-click="signUp = false" class="btn btn-danger btn-sm">Cancel</button>
-      </form>
-
-      <form name="loginForm" data-ng-show="signIn" class="form-group list-group list-group-item">
+      <form name="newUserForm" data-ng-show="user.signUp" class="form-group list-group list-group-item">
         <fieldset class="form-group">
           <input type='text' data-ng-model='user.email' placeholder='Email' class="form-control">
         </fieldset>
         <fieldset class="form-group">
-          <input type='text' data-ng-model='user.password' placeholder='Password' class="form-control">
+          <input type='password' data-ng-model='user.password' placeholder='Password' class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type='password' data-ng-model='user.password_confirmation' placeholder='Confirm Password' class="form-control">
+        </fieldset>       
+        <button data-ng-click="create(user)" class="btn btn-success btn-sm">Create</button>
+        <button data-ng-click="user.signUp = false" class="btn btn-danger btn-sm">Cancel</button>
+      </form>
+
+      <form name="loginForm" data-ng-show="user.logIn" class="form-group list-group list-group-item">
+        <fieldset class="form-group">
+          <input type='text' data-ng-model='user.email' placeholder='Email' class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type='password' data-ng-model='user.password' placeholder='Password' class="form-control">
         </fieldset>
         <button data-ng-click="signIn(user)" class="btn btn-success btn-sm">Sign In</button>
-        <button data-ng-click="signIn = false" class="btn btn-danger btn-sm">Cancel</button>
+        <button data-ng-click="user.logIn = false" class="btn btn-danger btn-sm">Cancel</button>
       </form>
     </div>
     <div data-ng-controller="ProductsCtrl" data-ng-init="index()" class='content'>
@@ -46,7 +45,7 @@
           <h1 class="text-center">Flatlander Crafted Gems</h1>
           <h2 class="text-center">– an Angular store –</h2>
         </header>
-      <div class='list-group list-group-item'>
+      <div class='list-group list-group-item' data-ng-show="isLoggedIn()">
         <button class="btn btn-success" data-ng-click='product.adding = true'>Add a new product</button>
 
         <div>
@@ -98,7 +97,7 @@
             <product-tabs></product-tabs>
             <div>
               <div>
-                <button class="btn btn-default" data-ng-click='product.update = true'>Update Product</button>
+                <button class="btn btn-default" data-ng-click='product.update = true' data-ng-show="isLoggedIn()">Update Product</button>
               </div>
                 <div>
                   <form name='addForm' data-ng-show='product.update'>
@@ -136,7 +135,7 @@
                 </div>
 
               <div>
-                <button class="btn btn-danger" data-ng-click='product.deleteConfirm = true' data-ng-hide='product.deleteConfirm || product.update'>Delete Product</button>
+                <button class="btn btn-danger" data-ng-click='product.deleteConfirm = true' data-ng-hide='product.deleteConfirm || product.update' data-ng-show="isLoggedIn()">Delete Product</button>
               </div>
               <div data-ng-show='product.deleteConfirm'>
                 <button class="btn btn-danger" data-ng-click='destroy(product)'>Confirm</button>
