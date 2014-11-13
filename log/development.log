@@ -31978,3 +31978,464 @@ Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 12:10:14 -0800
 Processing by Apiv1::ProductsController#index as JSON
   [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
 Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 146ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/angular-cookies.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/controller/products_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/users/controller/user_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/gem_store/users/controller/users_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 13:32:24 -0800
+Processing by Apiv1::ProductsController#index as JSON
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-13 13:32:33 -0800
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'test@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-11-13 21:32:33.364691"], ["last_sign_in_at", "2014-11-13 19:21:38.642637"], ["sign_in_count", 4], ["updated_at", "2014-11-13 21:32:33.366321"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 201 Created in 121ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-13 13:32:34 -0800
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 154ms (Views: 153.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/angular-cookies.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/controller/products_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/users/controller/user_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:09 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:10 -0800
+
+
+Started GET "/assets/gem_store/users/controller/users_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 13:35:10 -0800
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 13:35:10 -0800
+Processing by Apiv1::ProductsController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProduct Load (3.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-13 13:35:20 -0800
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 201 Created in 12ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-13 13:35:22 -0800
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 13:36:36 -0800
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 328ms (Views: 327.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/angular-cookies.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/controller/products_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/users/controller/user_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/gem_store/users/controller/users_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 13:36:37 -0800
+Processing by Apiv1::ProductsController#index as JSON
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 13:36:39 -0800
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 146ms (Views: 144.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/angular-cookies.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/controller/products_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/users/controller/user_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/users/controller/users_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 13:36:40 -0800
+Processing by Apiv1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-13 13:36:47 -0800
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'test@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2014-11-13 21:36:47.644963"], ["last_sign_in_at", "2014-11-13 21:32:33.364691"], ["sign_in_count", 5], ["updated_at", "2014-11-13 21:36:47.645870"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 110ms (Views: 4.4ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-13 13:36:50 -0800
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 13:38:35 -0800
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 239ms (Views: 238.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/angular-cookies.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/controller/products_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/users/controller/users_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 13:38:36 -0800
+Processing by Apiv1::ProductsController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-13 13:38:46 -0800
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 201 Created in 12ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-13 13:38:48 -0800
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-13 13:40:04 -0800
+Processing by AngularController#show as HTML
+  Rendered angular/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 227ms (Views: 225.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/angular-cookies.min.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/controller/products_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/app.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-gallery.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/controller/review_controller.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-reviews.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-specs.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-description.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/products/directives/product-tabs.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/gem_store/users/controller/users_ctrl.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+
+
+Started GET "/apiv1/products" for 127.0.0.1 at 2014-11-13 13:40:05 -0800
+Processing by Apiv1::ProductsController#index as JSON
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-13 13:40:13 -0800
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"logIn"=>true, "signUp"=>false, "email"=>"test@example.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'test@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2014-11-13 21:40:14.039997"], ["last_sign_in_at", "2014-11-13 21:36:47.644963"], ["sign_in_count", 6], ["updated_at", "2014-11-13 21:40:14.040685"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 124ms (Views: 1.7ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-13 13:40:15 -0800
+Processing by Devise::SessionsController#destroy as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 204 No Content in 3ms (ActiveRecord: 0.4ms)

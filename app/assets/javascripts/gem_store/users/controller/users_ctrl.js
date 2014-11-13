@@ -11,6 +11,7 @@
         console.log(data);
         $cookieStore.put('logged_user', data);
         user.signUp = false;
+        $scope.user = {};
       })
       .error(function(data, status){
         console.log(data);
@@ -27,6 +28,7 @@
       .success(function(data){
         $cookieStore.put('logged_user', data);
         user.logIn = false;
+        $scope.user = {};
       })
       .error(function(data,status){
         console.log(data);
