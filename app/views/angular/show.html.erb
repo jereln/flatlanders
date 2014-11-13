@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+
   </head>
 
   <body>
-    <div data-ng-controller="ProductsCtrl" data-ng-init="index()">
+    <div class="sidebar">
+      <div data-ng-show="!isLoggedIn()">
+        <button data-ng-click="signUp = true; signIn = false" class="btn btn-info btn-sm">Create Account</button>
+        <button data-ng-click="signIn = true; signUp = false" class="btn btn-info btn-sm">Sign In</button>
+      </div>
+      <div data-ng-show="isLoggedIn()">
+        <p>Signed in as {{ currentUser() }}</p>
+        <button data-ng-click="signOut() class="btn btn-info btn-sm"">Sign Out</button>
+      </div>
+      <form name="newUserForm" data-ng-show="signUp" class="form-group list-group list-group-item">
+        <fieldset class="form-group">
+          <input type='text' data-ng-model='newUser.email' placeholder='Email' class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type='text' data-ng-model='newUser.password' placeholder='Password' class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type='text' data-ng-model='newUser.password_confirmation' placeholder='Confirm Password' class="form-control">
+        </fieldset>       
+        <button data-ng-click="signUp(newUser)" class="btn btn-success btn-sm">Create</button>
+        <button data-ng-click="signUp = false" class="btn btn-danger btn-sm">Cancel</button>
+      </form>
+
+      <form name="loginForm" data-ng-show="signIn" class="form-group list-group list-group-item">
+        <fieldset class="form-group">
+          <input type='text' data-ng-model='user.email' placeholder='Email' class="form-control">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type='text' data-ng-model='user.password' placeholder='Password' class="form-control">
+        </fieldset>
+        <button data-ng-click="signIn(user)" class="btn btn-success btn-sm">Sign In</button>
+        <button data-ng-click="signIn = false" class="btn btn-danger btn-sm">Cancel</button>
+      </form>
+    </div>
+    <div data-ng-controller="ProductsCtrl" data-ng-init="index()" class='content'>
       <div>
         <!--  Store Header  -->
         <header>
