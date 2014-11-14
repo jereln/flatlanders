@@ -18,7 +18,9 @@ I started off setting up the views. I created a form to create a new user and a 
 
 ##Resources
 https://www.codeschool.com/code_tv/soup-to-bits-shaping-up-with-angular-js  
-https://github.com/plataformatec/devise
+https://github.com/plataformatec/devise  
+https://github.com/cenkayberkin/angularRailsfy  
+https://github.com/sotoseattle/cf_angurails
 
 ##Collaborators
 Tyler Morgan
