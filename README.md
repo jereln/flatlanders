@@ -13,8 +13,14 @@ Following the Soup to Bits tutorial from Code School and what Tyler taught us in
 ###Single-Page CRUD
 Using the Angular controller that Tyler created in class, I made a controller for my products store. Most of it moved directly over. Most of my time was getting the views set up correctly. I added Bootstrap formatting and made sure the ng-show, ng-hide, and ng-click items were all working. There were also a couple problems that I had with rendering the correct JSON object in my views. The objects were getting saved to the database but weren't automatically lading in the page.
 
+###Authentication with Devise
+I started off setting up the views. I created a form to create a new user and a form to login. The template was pretty similar to the form for adding a product. Since I wanted a single-page app, I didn't use ngRoute list Tyler did in class. Everything happens on the one page. Users who are not logged in can still see everything. I simply hid the new, update, and delete product buttons if no one is signed in. After that, I set up the UsersCtrl on the back end. This was also fairly similar to setting up the CRUD actions. This time, it was a POST or DELETE method to the users path. Once I got the back end set up, I tweaked the views a little bit more and was finished.
+
 ##Resources
-https://www.codeschool.com/code_tv/soup-to-bits-shaping-up-with-angular-js
+https://www.codeschool.com/code_tv/soup-to-bits-shaping-up-with-angular-js  
+https://github.com/plataformatec/devise  
+https://github.com/cenkayberkin/angularRailsfy  
+https://github.com/sotoseattle/cf_angurails
 
 ##Collaborators
 Tyler Morgan

@@ -14,7 +14,7 @@
  *= require_self
  */
 
-body {
+.content {
   width: 600px;
   margin: 0 auto;
 }
@@ -46,4 +46,10 @@ body {
 }
 .img-thumbnails {
   padding-left: 0px;
+}
+
+.sidebar {
+  float: right;
+  width: 300px;
+  padding-right: 40px;
 }
